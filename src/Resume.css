@@ -1,0 +1,50 @@
+:root{
+  --bg: #f7f7fb;
+  --card: #fff;
+  --accent: #0b5fff;
+  --muted: #666;
+}
+
+body {
+  background: var(--bg);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+.resume-root {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-card {
+  width: 800px;
+  background: var(--card);
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(20,20,40,0.06);
+  border-radius: 8px;
+}
+
+.resume-header h1 { margin: 0; font-size: 28px }
+.resume-header .title { color: var(--muted); margin-top: 6px }
+
+.two-col { display: flex; gap: 24px; margin-top: 18px }
+.two-col > div { flex: 1 }
+
+.section { margin-bottom: 18px }
+.section h2 { margin: 0 0 8px 0; font-size: 16px; color: var(--accent) }
+.item { margin-bottom: 12px }
+.company { color: var(--muted) }
+.duration { font-size: 13px; color: var(--muted); margin-bottom: 6px }
+
+.skills { display:flex; gap: 8px; flex-wrap:wrap; list-style:none; padding:0; margin:0 }
+.skills li { background:#eef4ff; padding:6px 8px; border-radius:6px; font-size:13px }
+
+.actions { display:flex; gap:12px; margin-top:18px }
+.actions button { background:var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:6px }
+.actions .download-link { align-self:center; color:var(--accent) }
+
+@media print {
+  body * { visibility: hidden }
+  #resume-root, #resume-root * { visibility: visible }
+  #resume-root { position: absolute; left: 0; top: 0 }
+}
